@@ -1,0 +1,334 @@
+@import 'normolize'
+@import 'elements'
+@import 'header'
+@import 'footer'
+@import 'slick'
+@import 'modal'
+
+.main
+    min-height: 100vh
+    position: relative
+    z-index: 1
+    display: flex
+    flex-direction: column
+    overflow: hidden
+    &-content
+        padding-top: 20px
+        padding-bottom: 100px
+        height: 100%
+        margin: auto
+        position: static
+
+    &__img
+        position: absolute
+        top: 0
+        right: 0
+        height: 100%
+        width: 45%
+        object-fit: cover
+        z-index: -111
+
+    p
+        max-width: 49%
+        font-size: 18px
+        margin-bottom: 40px
+
+    h1
+        position: relative
+        margin: 80px 0 60px
+        left: -80px
+        &::before
+            content: ''
+            display: inline-block
+            width: 350px
+            height: 350px
+            border-radius: 50%
+            background-color: $yelow
+            position: absolute
+            z-index: -1
+            left: -160px
+            top: -90px
+            opacity: .4
+
+    .btn
+        margin-right: 30px
+        &.mobile
+            display: none
+
+.why
+    background-color: $second
+    color: #fff
+    .container
+        align-items: flex-start
+    &-content,
+    &-items
+        width: 46%
+    &-items
+        justify-content: space-between
+
+    &-item
+        background-color: #fff
+        color: $black
+        width: 48%
+        text-align: center
+        margin-bottom: 26px
+        padding: 33px 10px
+        img
+            width: 105px
+            height: 105px
+            object-fit: contain
+            display: block
+            margin: 0 auto 25px
+        p
+            margin: 0
+
+.product
+    h2
+        margin-bottom: 60px
+
+    &-img
+        width: 48%
+        position: relative
+        z-index: 1
+        &::before
+            content: ''
+            display: block
+            width: 60%
+            height: 90%
+            position: absolute
+            top: 0
+            left: 0
+            background-color: $yelow
+            z-index: -1
+
+        img
+            width: 100%
+            position: relative
+            top: 10%
+            right: 15%
+            margin: 30px 0 10px
+
+    &-order
+        background-color: $second
+        color: #fff
+        text-align: center
+        max-width: 360px
+        padding: 31px 34px
+        box-shadow: -11px 23px 48px -8px rgba(0, 0, 0, 0.15)
+        margin: 0 auto
+        span
+            display: block
+            margin: 0 0 26px
+            font-weight: 400
+            font-size: 26px
+            line-height: 140%
+
+    &-content
+        width: 48%
+        .btn
+            margin-bottom: 32px
+
+    &__text
+        border-left: 10px solid #BAD7E9
+        padding-left: 20px
+        font-size: 17px
+        line-height: 140%
+
+.geography
+    overflow: hidden
+    .wrapper
+        align-items: stretch
+    &-content
+        width: 52%
+        // background-color: blue
+
+    &-img
+        width: 48%
+        // background-color: red
+        position: relative
+        z-index: 1
+        &::before
+            content: ''
+            display: block
+            width: 65%
+            height: 100%
+            position: absolute
+            top: 0
+            right: 10%
+            background-color: $yelow
+            z-index: -1
+            box-shadow: 14px 24px 40px -10px rgba(0, 0, 0, .2)
+
+        img
+            max-width: 140%
+            position: relative
+            margin: 0 auto
+            top: 25%
+            right: 25%
+
+    ul
+        list-style: none
+        margin-bottom: 50px
+        span
+            width: 45px
+            height: 45px
+            display: inline-block
+            vertical-align: middle
+            margin-right: 15px
+
+        li
+            font-weight: 400
+            font-size: 20px
+            line-height: 185%
+            margin-bottom: 8px
+
+    .btn
+        margin: 0
+
+    .c
+        &-1
+            background-color: $yelow
+        &-2
+            background-color: #FF963F
+        &-3
+            background-color: $prime
+        &-4
+            background-color: #14C462
+        &-5
+            background-color: #BB6BD9
+        &-6
+            background-color: #147388
+
+@media screen and ( max-width: 1500px )
+    .main
+        h1
+            left: -50px
+            margin: 30px 0
+            &::before
+                // display: none
+                width: 200px
+                height: 200px
+                left: 28%
+                top: -30px
+
+        p
+            font-size: 16px
+
+@media screen and ( max-width: 1380px )
+    .product
+        &-img
+            &::before
+                left: 10%
+
+            img
+                right: 16px
+
+@media screen and ( max-width: 1200px )
+    .main
+        text-align: center
+        &-content
+            padding-top: 50px
+        h1
+            left: 0
+            margin: 0 0 30px
+            &::before
+                display: none
+
+        p
+            margin: 0 auto 40px
+            max-width: 100%
+            margin-bottom: 30px
+
+        &__img
+            position: relative
+            left: -16px
+            width: 100vw
+            max-width: unset
+            height: 300px
+            margin: 0
+
+        .btn
+            display: none
+            &.mobile
+                display: inline-block
+                position: relative
+                top: -40px
+                margin: 0
+
+        .phone
+            border-top: 1px solid rgba(0, 0, 0, .1)
+            padding: 17px 0 0
+            width: 100%
+            max-width: 500px
+            margin: 0 auto
+            display: block
+            text-align: center
+
+    .why
+        h2
+            margin-bottom: 20px
+        .container
+            display: block
+
+        &-content
+            width: 100%
+            text-align: center
+            max-width: 800px
+            margin: 0 auto 60px
+
+        &-items
+            width: 100%
+            max-width: 700px
+            margin: 0 auto
+
+        &-item
+            width: 48%
+
+    .product
+        h2 
+            text-align: center
+            margin-bottom: 40px
+        
+        .container
+            display: block
+       
+        .wrap 
+            display: block
+
+        &-img
+            position: relative
+            width: 100vw
+            left: -16px
+            max-width: 900px
+            margin: 0 auto 35px
+            img
+                width: 500px
+                max-width: 90%
+                margin: 0 auto
+                display: block
+                position: static
+
+            &::before
+                width: 100%
+                height: 50%
+                right: 0
+                left: 0
+                top: auto
+                bottom: 20%
+
+        &-content
+            width: 100%
+            max-width: 600px
+            margin: 0 auto 
+            text-align: center
+
+        &__text 
+            padding-left: 0 
+            border: none
+
+@media screen and ( max-width: 700px )
+
+    .product
+        &-order 
+
+

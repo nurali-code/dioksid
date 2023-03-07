@@ -1,0 +1,387 @@
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    border: none
+    outline: none
+
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@900&family=Montserrat:wght@400;500;600;700&display=swap')
+
+$black: #000
+$black_upper: #374246
+$yelow: #BAD7E9
+$second: #2B3467
+$prime: #E31E25
+
+html
+    scroll-behavior: smooth
+
+body
+    min-height: 100vh
+    color: #000
+    display: flex
+    flex-direction: column
+    background-color: #fff
+    font-family: 'Montserrat', sans-serif
+    scroll-behavior: smooth
+
+    &.active
+        overflow: hidden
+
+h1,h2,h3,h4,h5,h6
+    font-family: 'Jost', sans-serif
+    line-height: 130%
+    text-transform: uppercase
+    margin: 0 0 20px
+
+h1
+    font-weight: 900
+    font-size: 60px
+    line-height: 130%
+h2
+    font-weight: 800
+    font-size: 48px
+    line-height: 130%
+    margin-bottom: 33px
+h3
+    font-weight: 800
+    font-size: 34px
+    line-height: 130%
+    margin-bottom: 32px
+
+h4
+    font-weight: 600
+    font-size: 24px
+    line-height: 140%
+    margin-bottom: 8px
+
+p
+    font-weight: 400
+    font-size: 20px
+    line-height: 150%
+    margin: 0 0 40px
+
+.container
+    width: 100%
+    max-width: 1300px
+    padding: 0 16px
+    margin: 0 auto
+    position: relative
+    z-index: 1
+
+img
+    max-width: 100%
+
+a,
+button
+    text-decoration: none
+    color: #000
+    transition: all ease .3s
+    background-color: transparent
+    &:active
+        transform: scale(.98)
+
+    &:hover
+        opacity: .8
+
+section
+    padding: 80px 0
+    position: relative
+
+.btn
+    font-weight: 600
+    font-size: 22px
+    line-height: 140%
+    text-transform: uppercase
+    display: inline-block
+    vertical-align: middle
+    text-align: center
+    color: #fff
+    padding: 20px 84px 19px
+    background-color: $prime
+    min-width: 200px
+    box-shadow: 0px 31px 27px -23px rgba(227, 30, 37, 0.31)
+    position: relative
+    span
+        display: block
+        opacity: .5
+
+    img
+        width: 40px
+        object-fit: cover
+        vertical-align: middle
+        border-radius: 1px
+        position: absolute
+        left: 14px
+        top: 50%
+        transform: translate(0%, -50%)
+
+    &-menu
+        display: inline-block
+        vertical-align: middle
+        width: 50px
+        height: 45px
+        margin: 0
+        background-color: transparent
+        transition: all ease .3s
+        background-color: $prime
+        position: relative
+        z-index: 999999999
+        box-shadow: 0px 5px 27px -10px $prime
+        span
+            position: absolute
+            top: 50%
+            left: 20%
+            margin-top: -2px
+            display: block
+            width: 60%
+            height: 2px
+            transition: all ease .3s
+            border-radius: 2px
+            background-color: #fff
+            &::before,
+            &::after
+                content: ''
+                display: block
+                width: 100%
+                height: 2px
+                background-color: #fff
+                position: absolute
+                top: 10px
+                left: 0
+                transition: all ease .3s
+                border-radius: 2px
+            &::after
+                top: -10px
+
+        &.active
+            span
+                top: 50%
+                left: 50%
+                transform: translate(-50%, -50%) rotate(-45deg)
+                background-color: #fff
+                &::before
+                    top: 50%
+                    left: 50%
+                    transform: translate(-50%, -50%) rotate(-90deg)
+                    background-color: #fff
+                &::after
+                    background-color: transparent
+
+    &:hover
+        opacity: 1
+        box-shadow: 0 10px 40px -5px rgba($prime, .8)
+
+    &:active
+        opacity: 1
+        transform: scale(.95)
+
+    &[disabled]
+        color: rgba(0, 0, 0, .2)
+        background-color: rgba($yelow, .3)
+        cursor: unset
+        animation: none
+        pointer-events: none
+        box-shadow: none
+
+    &-link
+        padding-right: 28px
+        background-image: url('../img/arrow_next.svg')
+        background-repeat: no-repeat
+        background-position: right center
+        background-size: 24px 24px
+        &:hover
+            color: $yelow
+            opacity: 1
+
+    &-second
+        box-shadow: none
+        background-color: transparent
+        color: #fff
+        border: 1px solid #fff
+        &:hover
+            opacity: 1
+            box-shadow: none
+            background-color: $yelow
+            border-color: $yelow
+
+    &-2
+        background-color: #BAD7E9
+        color: $black
+        box-shadow: none !important
+        padding: 20px 44px 19px
+        &[disabled]
+            background-color: #fff
+            opacity: .4
+
+.phone
+    display: inline-block
+    text-align: left
+    vertical-align: middle
+    span
+        font-weight: 400
+        font-size: 18px
+        line-height: 130%
+        display: block
+    b
+        font-weight: 600
+        font-size: 24px
+        color: $second
+        line-height: 130%
+
+.info
+    background-color: #FCFFE7
+    border: 1px solid rgba(0, 0, 0, 0.2)
+    padding: 25px 35px 10px
+    background-image: url('../img/i-info.svg')
+    background-repeat: no-repeat
+    background-position: right 20px top 20px
+    color: $black
+    p
+        max-width: 90%
+        margin: 0 0 20px
+        font-size: 18px
+
+    .btn
+        text-transform: unset
+
+.wrapper, .wrap, .wrap-strech, .wrap-start
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+.wrap
+    flex-wrap: wrap
+    &-strech
+        flex-wrap: wrap
+        align-items: stretch
+
+    &-start
+        align-items: start
+
+    &.around
+        justify-content: space-around
+
+    &.evenly
+        justify-content: space-evenly
+
+input,
+textarea,
+select
+    resize: none
+    display: block
+    width: 100%
+    max-width: 400px
+    height: 50px
+    background: #fff
+    font-weight: 400
+    font-size: 18px
+    line-height: 32px
+    padding: 0 20px
+    text-align: left
+    color: $black
+    appearance: none
+    margin-bottom: 20px
+    border-radius: 6px
+    border: 1px solid rgba(0, 0, 0, .2)
+    &::placeholder
+        color: rgba(#000 , .4)
+        font-weight: 300
+
+label
+    color: $black
+    display: block
+
+select
+    cursor: pointer
+    background-image: url('../img/arrow-down.svg')
+    background-repeat: no-repeat
+    background-position: center right 13px
+    background-size: 14px 14px
+    padding-right: 30px
+    position: relative
+    z-index: 1
+    margin: 0
+
+@keyframes shadowErr
+    0%
+        box-shadow: 0 0 20px 0 rgba(red, .4)
+    100%
+        box-shadow: none
+
+.heading
+    font-weight: 600
+    font-size: 20px
+    line-height: 22px
+
+.text
+    font-style: normal
+    font-weight: 400
+    font-size: 16px
+    line-height: 22px
+
+.subheading
+    font-weight: 600
+    font-size: 32px
+    line-height: 120%
+    text-align: center
+    margin-bottom: 30px
+
+textarea
+    min-height: 200px
+    line-height: 130%
+    padding: 8px 10px 0
+    height: unset
+
+@media screen and ( max-width: 1500px )
+    .container
+        max-width: 1200px
+
+    h1
+        font-size: 48px
+
+@media screen and ( max-width: 1200px )
+    p
+        font-size: 16px
+        margin-bottom: 30px
+
+    h1
+        font-size: 36px
+
+    h2 
+        font-size: 30px
+
+    section
+        padding: 60px 0
+
+    .logo
+        max-width: 200px
+
+    .btn
+        min-width: 180px
+
+    ul
+        &.dont,
+        &.do
+            li
+                padding-left: 35px
+                background-size: 26px 26px
+
+    .info
+        background-position: center top 10px
+        padding-top: 100px
+        background-size: 80px
+        max-width: 500px
+        margin: 0 auto 
+        p
+            max-width: 100%
+
+@media screen and ( max-width: 700px )
+    h1
+        font-size: 30px
+
+    h2
+        font-size: 28px
+
+    select
+        font-size: 16px
