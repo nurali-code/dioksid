@@ -753,6 +753,9 @@ textarea {
   }
   .btn {
     min-width: 180px;
+    font-size: 18px;
+    padding: 20px 24px 19px;
+    min-width: 200px;
   }
   ul.dont li, ul.do li {
     padding-left: 35px;
@@ -764,10 +767,10 @@ textarea {
   .info {
     background-position: center top 10px;
     padding-top: 100px;
-    -webkit-background-size: 80px 80px;
-       -moz-background-size: 80px;
-         -o-background-size: 80px;
-            background-size: 80px;
+    -webkit-background-size: 80px auto;
+       -moz-background-size: 80px auto;
+         -o-background-size: 80px auto;
+            background-size: 80px auto;
     max-width: 500px;
     margin: 0 auto;
   }
@@ -782,8 +785,38 @@ textarea {
   h2 {
     font-size: 28px;
   }
+  p {
+    font-size: 15px;
+  }
+  h3 {
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+  h4 {
+    font-size: 20px;
+  }
   select {
     font-size: 16px;
+  }
+  .info {
+    -webkit-background-size: 60px auto;
+       -moz-background-size: 60px auto;
+         -o-background-size: 60px auto;
+            background-size: 60px auto;
+    padding: 80px 10px 5px;
+  }
+  .info p {
+    font-size: 14px;
+  }
+  .btn-menu {
+    width: 40px;
+    height: 36px;
+  }
+  .btn-menu span::before {
+    top: -8px;
+  }
+  .btn-menu span::after {
+    top: 8px;
   }
 }
 header {
@@ -881,29 +914,11 @@ header .nav .phone i {
 }
 @media screen and (max-width: 700px) {
   header {
-    padding: 18px 0;
-  }
-  header .container {
-    min-height: 52px;
+    padding: 16px 0;
   }
   header .logo {
-    max-width: 140px;
-  }
-  header .btn {
-    display: none;
-  }
-  header .actions {
-    padding-top: 2px;
-    display: block;
-    margin-right: 20px;
-  }
-  header .phone {
-    margin: 2px 0;
-    display: block;
-    padding: 0;
-  }
-  header .phone i {
-    display: none;
+    max-width: 160px;
+    margin: 0;
   }
   header .nav {
     max-width: 310px;
@@ -1845,7 +1860,8 @@ header .nav .phone i {
     text-align: center;
   }
   .main-content {
-    padding-top: 50px;
+    padding-top: 40px;
+    padding-bottom: 60px;
   }
   .main h1 {
     left: 0;
@@ -1946,5 +1962,45 @@ header .nav .phone i {
   .product__text {
     padding-left: 0;
     border: none;
+  }
+  .geography {
+    display: none;
+  }
+}
+@media screen and (max-width: 700px) {
+  .main p {
+    font-size: 12px;
+  }
+  .why-item {
+    padding: 24px 5px;
+    width: 49%;
+    margin-bottom: 8px;
+  }
+  .why-item img {
+    width: 68px;
+    height: 68px;
+    margin-bottom: 12px;
+  }
+  .why-item p {
+    font-size: 13px;
+  }
+  .product-order {
+    width: 300px;
+    max-width: 90%;
+    padding: 18px 20px 22px;
+  }
+  .product-order span {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  .product__text {
+    font-size: 14px;
+    max-width: 385px;
+    margin: 0 auto 30px;
+  }
+}
+@media screen and (max-width: 360px) {
+  .why-item p {
+    font-size: 10px;
   }
 }/*# sourceMappingURL=style.css.map */

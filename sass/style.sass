@@ -227,7 +227,8 @@
     .main
         text-align: center
         &-content
-            padding-top: 50px
+            padding-top: 40px
+            padding-bottom: 60px
         h1
             left: 0
             margin: 0 0 30px
@@ -285,14 +286,14 @@
             width: 48%
 
     .product
-        h2 
+        h2
             text-align: center
             margin-bottom: 40px
-        
+
         .container
             display: block
-       
-        .wrap 
+
+        .wrap
             display: block
 
         &-img
@@ -319,16 +320,51 @@
         &-content
             width: 100%
             max-width: 600px
-            margin: 0 auto 
+            margin: 0 auto
             text-align: center
 
-        &__text 
-            padding-left: 0 
+        &__text
+            padding-left: 0
             border: none
 
+    .geography
+        display: none
+
 @media screen and ( max-width: 700px )
+    .main
+        p
+            font-size: 12px
+    .why
+        &-items 
+            
+        &-item
+            padding: 24px 5px
+            width: 49%
+            margin-bottom: 8px
+            img
+                width: 68px
+                height: 68px
+                margin-bottom: 12px
+
+            p 
+                font-size: 13px
 
     .product
-        &-order 
+        &-order
+            width: 300px
+            max-width: 90%
+            padding: 18px 20px 22px
+            span
+                font-size: 18px
+                margin-bottom: 10px
 
+        &__text
+            font-size: 14px
+            max-width: 385px
+            margin: 0 auto 30px
 
+@media screen and ( max-width: 360px )
+    .why
+        &-item
+            p
+                font-size: 10px
