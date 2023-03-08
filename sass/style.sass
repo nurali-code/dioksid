@@ -199,6 +199,83 @@
         &-6
             background-color: #147388
 
+.production
+    background-color: $second
+    color: #fff
+    padding: 0
+    margin: 50px 0
+    .container
+        align-items: stretch
+
+    &-img
+        object-fit: cover
+    &-img,
+    &-content
+        width: 45%
+        display: block
+    &-content
+        padding: 100px 0 50px
+
+    .headline
+        text-transform: none
+        img
+            display: inline-block
+            vertical-align: middle
+            margin: 0 2px 0 0
+            max-width: 40px
+
+.certificate
+    &-item
+        position: relative
+        z-index: 1
+        padding: 120px 46% 120px 0
+        max-width: 990px
+        margin: 0 auto
+        &::after
+            content: ''
+            display: block
+            width: 450px
+            height: 450px
+            border-radius: 50%
+            background-color: $prime
+            position: absolute
+            z-index: -1
+            top: 50%
+            right: 0
+            transform: translateY(-50%)
+
+        img
+            position: absolute
+            right: 23%
+            top: 45%
+            transform: translateY(-50%)
+            display: block
+            width: 260px
+            object-fit: contain
+            border: 4px solid #2B3467
+            box-shadow: 29px 29px 0px -4px #000000
+
+        h3
+            margin-bottom: 10px
+
+        p
+            margin-bottom: 25px
+
+        .btn
+            text-transform: none
+
+        &:nth-child(odd)
+            padding-right: 0
+            padding-left: 44%
+            &::after
+                right: auto
+                left: 0%
+
+            img
+                right: auto
+                left: 15%
+                box-shadow: -29px 29px 0px -4px #000000
+
 @media screen and ( max-width: 1500px )
     .main
         h1
@@ -327,7 +404,10 @@
             padding-left: 0
             border: none
 
-    .geography
+    .geography,
+    .production,
+    .certificate,
+    footer
         display: none
 
 @media screen and ( max-width: 700px )
@@ -335,8 +415,8 @@
         p
             font-size: 12px
     .why
-        &-items 
-            
+        &-items
+
         &-item
             padding: 24px 5px
             width: 49%
@@ -346,7 +426,7 @@
                 height: 68px
                 margin-bottom: 12px
 
-            p 
+            p
                 font-size: 13px
 
     .product
