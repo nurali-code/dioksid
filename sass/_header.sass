@@ -56,12 +56,14 @@ header
             background-color: $black
             padding: 40px 0 60px
 
-            &-link
+            &__link
+                display: block
                 font-weight: 600
                 padding: 10px 40px
                 max-width: 330px
                 margin: 0
                 text-align: left
+                color: #fff
 
             &.active
                 transform: translateX(0px)
@@ -71,10 +73,6 @@ header
             .btn
                 display: inline-block
                 margin: 25px 40px
-
-            .phone,
-            .phone i
-                display: block
 
     @media screen and ( max-width: 700px )
         padding: 16px 0
