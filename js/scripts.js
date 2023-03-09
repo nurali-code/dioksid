@@ -52,7 +52,7 @@ $(function () {
 
 /*---------------------------------------------------end*/
 
-$('input[name="u-phone"]').inputmask({ "mask": "+8-999-999-99-99" });
+$('input[name="u-phone"]').inputmask({ "mask": "8-999-999-99-99" });
 
 $(".form").submit(function () {
     $('form .btn').attr('disabled', 'disabled');
