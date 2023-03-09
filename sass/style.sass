@@ -8,7 +8,6 @@
 .main
     min-height: 100vh
     position: relative
-    z-index: 1
     display: flex
     flex-direction: column
     overflow: hidden
@@ -27,6 +26,7 @@
         width: 45%
         object-fit: cover
         z-index: -111
+        background-color: #eee
 
     p
         max-width: 49%
@@ -40,14 +40,14 @@
         &::before
             content: ''
             display: inline-block
-            width: 350px
-            height: 350px
+            width: 340px
+            height: 340px
             border-radius: 50%
             background-color: $yelow
             position: absolute
             z-index: -1
             left: -160px
-            top: -90px
+            top: -80px
             opacity: .4
 
     .btn
@@ -59,10 +59,12 @@
     background-color: $second
     color: #fff
     .container
-        align-items: flex-start
+        // align-items: flex-start
+    
     &-content,
     &-items
         width: 46%
+    
     &-items
         justify-content: space-between
 

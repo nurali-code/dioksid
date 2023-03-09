@@ -17,11 +17,11 @@
             <div class="container wrap">
                 <img src="img/logo.jpg" class="logo" alt="Диоксид лого">
                 <nav class="nav wrap">
-                    <a href="#" class="nav__link">Сертификаты</a>
+                    <a href="#certificate" class="nav__link">Сертификаты</a>
                     <a href="#product" class="nav__link">Продукция</a>
-                    <a href="#" class="nav__link">Контакты</a>
+                    <a href="#footer" class="nav__link">Контакты</a>
                 </nav>
-                <button class="btn-menu"><span></span></button>
+                <button data-modal="modal-menu" class="btn-menu"><span></span></button>
             </div>
         </header>
 
@@ -31,8 +31,8 @@
                 производитель <br>
                 углекислоты
             </h1>
-            <img src="img/main.jpg" class="main__img" alt="main">
-            <button class="btn mobile">заказать</button>
+            <img src="img/main.jpg" loading="lazy" class="main__img" alt="main">
+            <button data-modal="modal-form" class="btn mobile">заказать</button>
             <p>
                 ПК «Диоксид» занимается производством жидкой двуокиси углерода(CO2) в Алтайском крае. Современный
                 производственный комплекс позволяет производить углекислоту высшего качества, что подтверждается
@@ -42,7 +42,7 @@
                 На базе производственного комплекса расположена лаборатория, имеющая
                 свидетельство о соответствии по контролю качества и чистоты продукции.
             </p>
-            <button class="btn">заказать</button>
+            <button data-modal="modal-form" class="btn">заказать</button>
             <a href="tel:89132606136" class="phone">
                 <span>Телефон отдела продаж:</span>
                 <b>8(913)-260-61-36</b>
@@ -50,7 +50,7 @@
         </div>
     </main>
 
-    <section class="why">
+    <section class="why" id="why">
         <div class="container wrap">
             <div class="why-content">
                 <h2>Почему клиенты выбирают нас</h2>
@@ -59,7 +59,7 @@
                     сертификатами.
                     Продукция соответствует ГОСТ 8050-85.
                 </p>
-                <button class="btn">Заказать</button>
+                <button class="btn" data-modal="modal-form">Заказать</button>
             </div>
             <div class="why-items wrap">
                 <div class="why-item">
@@ -102,7 +102,7 @@
                     <img src="img/product.png" class="product__img" alt="product">
                     <p class="product-order">
                         <span>Поставка оптом от <br> <b>2 тонн</b> и более</span>
-                        <button class="btn">Заказать</button>
+                        <button data-modal="modal-form" class="btn">Заказать</button>
                     </p>
                 </div>
                 <div class="product-content">
@@ -116,7 +116,7 @@
                         Масса углекислоты в баллоне 24 кг, соответствие заявленной характеристике гарантируется за счет
                         автоматической системы взвешивания и контроля.
                     </p>
-                    <button class="btn btn-2">Расчитать стоимость</button>
+                    <button class="btn btn-2" data-modal="modal-calc">Расчитать стоимость</button>
                     <div class="info">
                         <h4>Заливка по балонам</h4>
                         <p>
@@ -130,7 +130,7 @@
         </div>
     </section>
 
-    <section class="geography">
+    <section class="geography" id="geography">
         <div class="container wrapper">
             <div class="geography-content">
                 <h2>География продаж </h2>
@@ -146,7 +146,7 @@
                     <li><span class="c-5"></span> Республика Казахстан</li>
                     <li><span class="c-6"></span> Новосибирская область</li>
                 </ul>
-                <button class="btn">Заказать</button>
+                <button class="btn" data-modal="modal-form">Заказать</button>
             </div>
             <div class="geography-img">
                 <img src="img/map.png" alt="map">
@@ -154,7 +154,7 @@
         </div>
     </section>
 
-    <section class="production">
+    <section class="production" id="production">
         <div class="container wrap">
             <div class="production-content">
                 <h2>Технология Производства</h2>
@@ -187,11 +187,11 @@
         </div>
     </section>
 
-    <section class="certificate">
+    <section class="certificate" id="certificate">
         <div class="container">
             <h2>Наши сертификаты</h2>
             <div class="certificate-item">
-                <img src="img/item-1.jpg" alt="item">
+                <img loading="lazy" src="img/item-1.jpg" alt="item">
                 <h3>Сертификат соответствия</h3>
                 <p>
                     Предприятие производит продукцию высшего качества, подтвержденное
@@ -199,7 +199,7 @@
                 <a href="#" class="btn btn-2">Скачать .pdf</a>
             </div>
             <div class="certificate-item">
-                <img src="img/item-2.jpg" alt="item">
+                <img loading="lazy" src="img/item-2.jpg" alt="item">
                 <h3>Декларация о соответствии</h3>
                 <p>
                     Предприятие производит продукцию высшего качества, подтвержденное
@@ -207,7 +207,7 @@
                 <a href="#" class="btn btn-2">Скачать .pdf</a>
             </div>
             <div class="certificate-item">
-                <img src="img/item-3.jpg" alt="item">
+                <img loading="lazy" src="img/item-3.jpg" alt="item">
                 <h3>Паспорт качества</h3>
                 <p>
                     Предприятие производит продукцию высшего качества, подтвержденное
@@ -217,7 +217,7 @@
         </div>
     </section>
 
-    <footer>
+    <footer id="footer">
         <iframe src=""></iframe>
         <div class="container">
             <div class="wrapper">
@@ -264,6 +264,146 @@
             <a href="#" target="_blank">Cайт разработан веб-студией <b>IT IDEA</b></a>
         </div>
     </footer>
+
+    <div class="modal" id="modal-menu">
+        <div class="modal-content">
+            <nav>
+                <a href="#certificate">сертификаты</a>
+                <a href="#why">почему мы?</a>
+                <a href="#product">Продукция</a>
+                <a href="#geography">География продаж </a>
+                <a href="#production">Производство</a>
+                <a href="#footer">контакты</a>
+            </nav>
+            <a href="tel:89132606136" class="phone">
+                <span>Телефон отдела продаж:</span>
+                <b>8(913)-260-61-36</b>
+            </a>
+            <a href="mailto:meshki_brn@mail.ru" class="phone">
+                <span>Напишите нам:</span>
+                <b>meshki_brn@mail.ru</b>
+            </a>
+            <button data-modal="modal-form" class="btn">сделать заказ</button>
+        </div>
+    </div>
+
+    <div class="modal" id="modal-calc">
+        <div class="modal-content">
+            <button class="modal-close">&#x2715</button>
+            <h3>Расчёт стоимости</h3>
+            <p>Закажите полный расчёт стоимости с доставкой</p>
+            <div class="wrap form">
+                <input type="hidden" name="headline" value="Заказан звонок">
+                <div class="inp-wrap volume-inp">
+                    <label>Объём <i>*</i></label>
+                    <input type="number" name="u-volume" placeholder="от 1.000 кг">
+                </div>
+                <div class="inp-wrap">
+                    <label>Регион доставки</label>
+                    <select name="region">
+                        <option hidden>Выберите Регеон</option>
+                        <option value="Алтайский край">Алтайский край</option>
+                        <option value="Амурская область">Амурская область</option>
+                        <option value="Архангельская область">Архангельская область</option>
+                        <option value="Астраханская область">Астраханская область</option>
+                        <option value="Белгородская область">Белгородская область</option>
+                        <option value="Брянская область">Брянская область</option>
+                        <option value="Владимирская область">Владимирская область</option>
+                        <option value="Волгоградская область">Волгоградская область</option>
+                        <option value="Вологодская область">Вологодская область</option>
+                        <option value="Воронежская область">Воронежская область</option>
+                        <option value="Москва">Москва</option>
+                        <option value="Санкт-Петербург">Санкт-Петербург</option>
+                        <option value="Севастополь">Севастополь</option>
+                        <option value="Донецкая Народная Республика">Донецкая Народная Республика</option>
+                        <option value="Еврейская автономная область">Еврейская автономная область</option>
+                        <option value="Забайкальский край">Забайкальский край</option>
+                        <option value="Запорожская область">Запорожская область</option>
+                        <option value="Ивановская область">Ивановская область</option>
+                        <option value="Иркутская область">Иркутская область</option>
+                        <option value="Кабардино-Балкарская Республика">Кабардино-Балкарская Республика</option>
+                        <option value="Калининградская область">Калининградская область</option>
+                        <option value="Калужская область">Калужская область</option>
+                        <option value="Камчатский край">Камчатский край</option>
+                        <option value="Карачаево-Черкесская Республика">Карачаево-Черкесская Республика</option>
+                        <option value="Кемеровская область — Кузбасс">Кемеровская область — Кузбасс</option>
+                        <option value="Кировская область">Кировская область</option>
+                        <option value="Костромская область">Костромская область</option>
+                        <option value="Краснодарский край">Краснодарский край</option>
+                        <option value="Красноярский край">Красноярский край</option>
+                        <option value="Курганская область">Курганская область</option>
+                        <option value="Курская область">Курская область</option>
+                        <option value="Ленинградская область">Ленинградская область</option>
+                        <option value="Липецкая область">Липецкая область</option>
+                        <option value="Луганская Народная Республика">Луганская Народная Республика</option>
+                        <option value="Магаданская область">Магаданская область</option>
+                        <option value="Московская область">Московская область</option>
+                        <option value="Мурманская область">Мурманская область</option>
+                        <option value="Ненецкий автономный округ">Ненецкий автономный округ</option>
+                        <option value="Нижегородская область">Нижегородская область</option>
+                        <option value="Новгородская область">Новгородская область</option>
+                        <option value="Новосибирская область">Новосибирская область</option>
+                        <option value="Омская область">Омская область</option>
+                        <option value="Оренбургская область">Оренбургская область</option>
+                        <option value="Орловская область">Орловская область</option>
+                        <option value="Пензенская область">Пензенская область</option>
+                        <option value="Пермский край">Пермский край</option>
+                        <option value="Приморский край">Приморский край</option>
+                        <option value="Псковская область">Псковская область</option>
+                        <option value="Республика Адыгея (Адыгея)">Республика Адыгея (Адыгея)</option>
+                        <option value="Республика Алтай">Республика Алтай</option>
+                        <option value="Республика Башкортостан">Республика Башкортостан</option>
+                        <option value="Республика Бурятия">Республика Бурятия</option>
+                        <option value="Республика Дагестан">Республика Дагестан</option>
+                        <option value="Республика Ингушетия">Республика Ингушетия</option>
+                        <option value="Республика Калмыкия">Республика Калмыкия</option>
+                        <option value="Республика Карелия">Республика Карелия</option>
+                        <option value="Республика Коми">Республика Коми</option>
+                        <option value="Республика Крым">Республика Крым</option>
+                        <option value="Республика Марий Эл">Республика Марий Эл</option>
+                        <option value="Республика Мордовия">Республика Мордовия</option>
+                        <option value="Республика Саха (Якутия)">Республика Саха (Якутия)</option>
+                        <option value="Республика Северная Осетия — Алания">Республика Северная Осетия — Алания</option>
+                        <option value="Республика Татарстан (Татарстан)">Республика Татарстан (Татарстан)</option>
+                        <option value="Республика Тыва">Республика Тыва</option>
+                        <option value="Республика Хакасия">Республика Хакасия</option>
+                        <option value="Ростовская область">Ростовская область</option>
+                        <option value="Рязанская область">Рязанская область</option>
+                        <option value="Самарская область">Самарская область</option>
+                        <option value="Саратовская область">Саратовская область</option>
+                        <option value="Сахалинская область">Сахалинская область</option>
+                        <option value="Свердловская область">Свердловская область</option>
+                        <option value="Смоленская область">Смоленская область</option>
+                        <option value="Ставропольский край">Ставропольский край</option>
+                        <option value="Тамбовская область">Тамбовская область</option>
+                        <option value="Тверская область">Тверская область</option>
+                        <option value="Томская область">Томская область</option>
+                        <option value="Тульская область">Тульская область</option>
+                        <option value="Тюменская область">Тюменская область</option>
+                        <option value="Удмуртская Республика">Удмуртская Республика</option>
+                        <option value="Ульяновская область">Ульяновская область</option>
+                        <option value="Хабаровский край">Хабаровский край</option>
+                        <option value="Ханты-Мансийский автономный округ — Югра">Ханты-Мансийский автономный округ —
+                            Югра</option>
+                        <option value="Херсонская область">Херсонская область</option>
+                        <option value="Челябинская область">Челябинская область</option>
+                        <option value="Чеченская Республика">Чеченская Республика</option>
+                        <option value="Чувашская Республика — Чувашия">Чувашская Республика — Чувашия</option>
+                        <option value="Чукотский автономный округ">Чукотский автономный округ</option>
+                        <option value="Ямало-Ненецкий автономный округ">Ямало-Ненецкий автономный округ</option>
+                        <option value="Ярославская область">Ярославская область</option>
+                        <option value="Иные территории,включая город и космодром Байконур">Иные территории,включая город
+                            и космодром Байконур</option>
+                    </select>
+                </div>
+                <div class="inp-wrap total wrap">
+                    <label>Орентировачная цена</label>
+                    <span class="value">55 000</span>
+                </div>
+                <button class="btn" data-modal="modal-form">Заказать</button>
+            </div>
+        </div>
+    </div>
 
     <div class="modal" id="modal-form">
         <div class="modal-content">
@@ -386,123 +526,8 @@
         </div>
     </div>
 
-    <div class="modal" id="modal-calc">
-        <div class="modal-content">
-            <button class="modal-close">&#x2715</button>
-            <h3>Расчёт стоимости</h3>
-            <p>Закажите полный расчёт стоимости с доставкой</p>
-            <div class="wrap form">
-                <input type="hidden" name="headline" value="Заказан звонок">
-                <div class="inp-wrap volume-inp">
-                    <label>Объём <i>*</i></label>
-                    <input type="number" name="u-volume" placeholder="от 1.000 кг">
-                </div>
-                <div class="inp-wrap">
-                    <label>Регион доставки</label>
-                    <select name="region">
-                        <option hidden>Выберите Регеон</option>
-                        <option value="Алтайский край">Алтайский край</option>
-                        <option value="Амурская область">Амурская область</option>
-                        <option value="Архангельская область">Архангельская область</option>
-                        <option value="Астраханская область">Астраханская область</option>
-                        <option value="Белгородская область">Белгородская область</option>
-                        <option value="Брянская область">Брянская область</option>
-                        <option value="Владимирская область">Владимирская область</option>
-                        <option value="Волгоградская область">Волгоградская область</option>
-                        <option value="Вологодская область">Вологодская область</option>
-                        <option value="Воронежская область">Воронежская область</option>
-                        <option value="Москва">Москва</option>
-                        <option value="Санкт-Петербург">Санкт-Петербург</option>
-                        <option value="Севастополь">Севастополь</option>
-                        <option value="Донецкая Народная Республика">Донецкая Народная Республика</option>
-                        <option value="Еврейская автономная область">Еврейская автономная область</option>
-                        <option value="Забайкальский край">Забайкальский край</option>
-                        <option value="Запорожская область">Запорожская область</option>
-                        <option value="Ивановская область">Ивановская область</option>
-                        <option value="Иркутская область">Иркутская область</option>
-                        <option value="Кабардино-Балкарская Республика">Кабардино-Балкарская Республика</option>
-                        <option value="Калининградская область">Калининградская область</option>
-                        <option value="Калужская область">Калужская область</option>
-                        <option value="Камчатский край">Камчатский край</option>
-                        <option value="Карачаево-Черкесская Республика">Карачаево-Черкесская Республика</option>
-                        <option value="Кемеровская область — Кузбасс">Кемеровская область — Кузбасс</option>
-                        <option value="Кировская область">Кировская область</option>
-                        <option value="Костромская область">Костромская область</option>
-                        <option value="Краснодарский край">Краснодарский край</option>
-                        <option value="Красноярский край">Красноярский край</option>
-                        <option value="Курганская область">Курганская область</option>
-                        <option value="Курская область">Курская область</option>
-                        <option value="Ленинградская область">Ленинградская область</option>
-                        <option value="Липецкая область">Липецкая область</option>
-                        <option value="Луганская Народная Республика">Луганская Народная Республика</option>
-                        <option value="Магаданская область">Магаданская область</option>
-                        <option value="Московская область">Московская область</option>
-                        <option value="Мурманская область">Мурманская область</option>
-                        <option value="Ненецкий автономный округ">Ненецкий автономный округ</option>
-                        <option value="Нижегородская область">Нижегородская область</option>
-                        <option value="Новгородская область">Новгородская область</option>
-                        <option value="Новосибирская область">Новосибирская область</option>
-                        <option value="Омская область">Омская область</option>
-                        <option value="Оренбургская область">Оренбургская область</option>
-                        <option value="Орловская область">Орловская область</option>
-                        <option value="Пензенская область">Пензенская область</option>
-                        <option value="Пермский край">Пермский край</option>
-                        <option value="Приморский край">Приморский край</option>
-                        <option value="Псковская область">Псковская область</option>
-                        <option value="Республика Адыгея (Адыгея)">Республика Адыгея (Адыгея)</option>
-                        <option value="Республика Алтай">Республика Алтай</option>
-                        <option value="Республика Башкортостан">Республика Башкортостан</option>
-                        <option value="Республика Бурятия">Республика Бурятия</option>
-                        <option value="Республика Дагестан">Республика Дагестан</option>
-                        <option value="Республика Ингушетия">Республика Ингушетия</option>
-                        <option value="Республика Калмыкия">Республика Калмыкия</option>
-                        <option value="Республика Карелия">Республика Карелия</option>
-                        <option value="Республика Коми">Республика Коми</option>
-                        <option value="Республика Крым">Республика Крым</option>
-                        <option value="Республика Марий Эл">Республика Марий Эл</option>
-                        <option value="Республика Мордовия">Республика Мордовия</option>
-                        <option value="Республика Саха (Якутия)">Республика Саха (Якутия)</option>
-                        <option value="Республика Северная Осетия — Алания">Республика Северная Осетия — Алания</option>
-                        <option value="Республика Татарстан (Татарстан)">Республика Татарстан (Татарстан)</option>
-                        <option value="Республика Тыва">Республика Тыва</option>
-                        <option value="Республика Хакасия">Республика Хакасия</option>
-                        <option value="Ростовская область">Ростовская область</option>
-                        <option value="Рязанская область">Рязанская область</option>
-                        <option value="Самарская область">Самарская область</option>
-                        <option value="Саратовская область">Саратовская область</option>
-                        <option value="Сахалинская область">Сахалинская область</option>
-                        <option value="Свердловская область">Свердловская область</option>
-                        <option value="Смоленская область">Смоленская область</option>
-                        <option value="Ставропольский край">Ставропольский край</option>
-                        <option value="Тамбовская область">Тамбовская область</option>
-                        <option value="Тверская область">Тверская область</option>
-                        <option value="Томская область">Томская область</option>
-                        <option value="Тульская область">Тульская область</option>
-                        <option value="Тюменская область">Тюменская область</option>
-                        <option value="Удмуртская Республика">Удмуртская Республика</option>
-                        <option value="Ульяновская область">Ульяновская область</option>
-                        <option value="Хабаровский край">Хабаровский край</option>
-                        <option value="Ханты-Мансийский автономный округ — Югра">Ханты-Мансийский автономный округ —
-                            Югра</option>
-                        <option value="Херсонская область">Херсонская область</option>
-                        <option value="Челябинская область">Челябинская область</option>
-                        <option value="Чеченская Республика">Чеченская Республика</option>
-                        <option value="Чувашская Республика — Чувашия">Чувашская Республика — Чувашия</option>
-                        <option value="Чукотский автономный округ">Чукотский автономный округ</option>
-                        <option value="Ямало-Ненецкий автономный округ">Ямало-Ненецкий автономный округ</option>
-                        <option value="Ярославская область">Ярославская область</option>
-                        <option value="Иные территории,включая город и космодром Байконур">Иные территории,включая город
-                            и космодром Байконур</option>
-                    </select>
-                </div>
-                <div class="inp-wrap total wrap">
-                    <label>Орентировачная цена</label>
-                    <span class="value">55 000</span>
-                </div>
-                <button class="btn">Заказать</button>
-            </div>
-        </div>
-    </div>
+
+
 
     <script src="./js/jquery-3.4.1.min.js" defer></script>
     <script src="./js/jquery.inputmask.min.js" defer></script>
