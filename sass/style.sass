@@ -140,6 +140,7 @@
 .geography
     border-top: 1px solid rgba(0, 0, 0, .2)
     overflow: hidden
+    margin: 50px 0 0
     p
         max-width: 58%
 
@@ -206,19 +207,21 @@
     background-color: $second
     color: #fff
     padding: 0
-    margin: 50px 0
+    margin: 80px 0
+    overflow: hidden
     .container
-        align-items: stretch
+        padding: 100px 16px
 
     &-img
         object-fit: cover
-    &-img,
-    &-content
         width: 45%
-        display: block
+        height: 100%
+        position: absolute
+        top: 0
+        right: 0
 
-    &-content
-        padding: 100px 0
+    h2,p,.headline
+        max-width: 45%
 
     .headline
         text-transform: none
@@ -229,6 +232,7 @@
             max-width: 40px
 
 .certificate
+    overflow: hidden
     &-item
         position: relative
         z-index: 1
@@ -268,7 +272,7 @@
         .btn
             text-transform: none
 
-        &:nth-child(odd)
+        &:nth-child(even)
             padding-right: 0
             padding-left: 44%
             &::after
@@ -282,7 +286,7 @@
 
 @media screen and ( max-width: 1500px )
     .main
-        &-content 
+        &-content
             padding-bottom: 30px
         h1
             left: -50px
@@ -309,7 +313,7 @@
 @media screen and ( max-width: 1200px )
     .main
         text-align: center
-        height: unset 
+        height: unset
         max-height: unset
         &-content
             padding-top: 40px
@@ -412,13 +416,35 @@
             padding-left: 0
             border: none
 
-    .production,
-    .certificate,
-    footer
-        display: none
+    .certificate
+        &-item
+            padding: 80px 46% 80px 0
+            margin: 0 auto
+            max-width: 700px
+            img
+                width: 210px
+                right: 0
+
+                margin: 0 auto 30px
+                box-shadow: -13px 15px 0px -4px #000000 !important
+
+            &::after
+                top: 30px
+                right: -58px
+                width: 320px
+                height: 320px
+                transform: none
+
+            &:nth-child(even)
+                margin: 0 auto
+                &::after
+                    left: -58px
+                img
+                    left: 0
 
 @media screen and ( max-width: 820px )
     .geography
+        text-align: center
         &-img
             width: 100vw
             left: -16px
@@ -444,8 +470,10 @@
             margin-bottom: 10px
 
         ul
-            margin-bottom: 30px
+            max-width: 500px
+            margin: 0 auto 40px
             li
+                text-align: left
                 min-height: 30px
                 font-size: 16px
 
@@ -457,6 +485,27 @@
 
         .btn
             min-width: 70%
+
+    .production
+        margin: 40px 0
+        .container
+            padding: 60px 16px 40px
+
+        &-img
+            width: 100vw
+            max-width: unset
+            object-position: bottom center
+            position: relative
+            right: auto
+            left: -16px
+            top: auto
+            height: 500px
+            margin-bottom: 30px
+
+        h2,p,.headline
+            max-width: 600px
+            margin-left: auto
+            margin-right: auto
 
 @media screen and ( max-width: 700px )
     .main
@@ -491,6 +540,37 @@
             font-size: 14px
             max-width: 385px
             margin: 0 auto 30px
+
+    .geography
+        text-align: left
+
+    .certificate
+        padding-bottom: 0px
+        h2 
+            margin-bottom: 60px
+        
+        &-item
+            text-align: center
+            padding: 0 !important
+            margin: 0 0 70px !important
+            img
+                display: block
+                transform: none
+                position: static
+                margin: 0 auto 30px !important
+            &::after
+                width: 320px
+                height: 320px
+                top: -10px
+                right: auto !important
+                left: 50% !important
+                transform: translateX(-50%)
+
+            &:nth-child(odd)
+                background-color: #eee
+                padding: 30px 20px !important
+                &::after
+                    top: 20px
 
 @media screen and ( max-width: 360px )
     .why
