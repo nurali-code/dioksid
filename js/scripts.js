@@ -50,9 +50,9 @@ $(function () {
 });
 /*---------------------------------------------------end*/
 
-/*---------------------------------------------------end*/
-
 $('input[name="u-phone"]').inputmask({ "mask": "8-999-999-99-99" });
+
+/*---------------------------------------------------end*/
 
 $(".form").submit(function () {
     $('form .btn').attr('disabled', 'disabled');
@@ -69,22 +69,6 @@ $(".form").submit(function () {
         $('.modal').fadeOut(); alert('Спасибо, за заявку , ожидайте с вами свяжется специалист');
 
     }); return false;
-});
-
-$("#calcResulte").submit(function () {
-    $('form .btn').attr('disabled', 'disabled');
-    $.ajax({
-        type: "POST",
-        method: 'POST',
-        url: "../telegram_calc.php",
-        data: $(this).serialize()
-    }).done(function () {
-        $('form .btn').removeAttr('disabled');
-        $('form').trigger('reset');
-        $('#modal-calcForm').fadeOut();
-        calculate();
-    });
-    return false;
 });
 
 function numberWithSpaces(x) { return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") };
