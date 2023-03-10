@@ -50,30 +50,28 @@ $(function () {
 });
 /*---------------------------------------------------end*/
 
-$('input[name="u-phone"]').inputmask({ "mask": "8-999-999-99-99" });
+$('input[type="tel"]').inputmask({ "mask": "8-999-999-99-99" });
 
 /*---------------------------------------------------end*/
 
-$(".form").submit(function () {
+$("form").submit(function () {
     $('form .btn').attr('disabled', 'disabled');
-    var formItem = $(this); var sender;
-    formItem.hasClass('formReview') ? sender = "../smart.php" : sender = "../telegram.php";
     $.ajax({
         type: "POST",
         method: 'POST',
-        url: sender,
+        url: "../smart.php",
         data: $(this).serialize()
     }).done(function () {
         $('form .btn').removeAttr('disabled');
         $('form').trigger('reset');
-        $('.modal').fadeOut(); alert('Спасибо, за заявку , ожидайте с вами свяжется специалист');
-
+        $('.modal').fadeOut();
+        alert('Спасибо, за заявку , ожидайте с вами свяжется специалист');
     }); return false;
 });
 
 function numberWithSpaces(x) { return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") };
 
-$('#cPrice').on('keyup', function () {
-    $(this).val(numberWithSpaces($(this).val().replace(/[^0-9.]/g, "")))
-})
+// $('#cPrice').on('keyup', function () {
+//     $(this).val(numberWithSpaces($(this).val().replace(/[^0-9.]/g, "")))
+// })
 

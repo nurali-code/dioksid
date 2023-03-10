@@ -520,6 +520,13 @@ section {
   background-position: right 20px top 20px;
   color: #000;
 }
+.info h4 {
+  margin-bottom: 10px;
+  max-width: 94%;
+}
+.info h4 span {
+  white-space: nowrap;
+}
 .info p {
   max-width: 90%;
   margin: 0 0 20px;
@@ -919,6 +926,7 @@ footer .row {
   border-top: 1px solid #eee;
 }
 footer .logo {
+  display: inline-block;
   max-width: 220px;
 }
 footer .wrapper {
@@ -1493,6 +1501,9 @@ footer .navbar .social a img {
     padding-left: 10px;
     padding-right: 10px;
   }
+  .modal#modal-menu .phone b {
+    font-size: 20px;
+  }
 }
 
 @-webkit-keyframes slideRight {
@@ -1662,19 +1673,20 @@ footer .navbar .social a img {
   width: 46%;
 }
 .why-items {
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-     -moz-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 4%;
 }
 .why-item {
   background-color: #fff;
   color: #000;
   width: 48%;
   text-align: center;
-  margin-bottom: 26px;
   padding: 33px 10px;
+  margin-bottom: 4%;
 }
 .why-item img {
   width: 105px;
@@ -1686,6 +1698,10 @@ footer .navbar .social a img {
 }
 .why-item p {
   margin: 0;
+}
+.why-item:last-of-type {
+  width: 100%;
+  padding: 33px;
 }
 
 .product h2 {
@@ -2002,6 +2018,7 @@ footer .navbar .social a img {
   }
   .why .container {
     display: block;
+    max-width: 600px;
   }
   .why-content {
     width: 100%;
@@ -2011,6 +2028,7 @@ footer .navbar .social a img {
   }
   .why-items {
     width: 100%;
+    gap: 2%;
     max-width: 700px;
     margin: 0 auto;
   }
