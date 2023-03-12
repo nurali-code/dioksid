@@ -57,9 +57,9 @@ $('input[type="tel"]').inputmask({ "mask": "8-999-999-99-99" });
 $("form").submit(function () {
     $('form .btn').attr('disabled', 'disabled');
     $.ajax({
-        type: "POST",
-        method: 'POST',
-        url: "../smart.php",
+        type: "post",
+        method: 'post',
+        url: "./smart.php",
         data: $(this).serialize()
     }).done(function () {
         $('form .btn').removeAttr('disabled');
@@ -71,7 +71,7 @@ $("form").submit(function () {
 
 function numberWithSpaces(x) { return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") };
 
-// $('#cPrice').on('keyup', function () {
-//     $(this).val(numberWithSpaces($(this).val().replace(/[^0-9.]/g, "")))
-// })
+$('input[name="volume"]').on('keyup', function () {
+    $(this).val(numberWithSpaces($(this).val().replace(/[^0-9.]/g, "")))
+})
 

@@ -19,7 +19,7 @@ $mail->SMTPSecure = 'ssl'; // Enable TLS encryption, `ssl` also accepted
 $mail->Port = 465; // TCP port to connect to
 
 $mail->setFrom('alicia.mir0nova@yandex.ru', 'Алиса'); // От кого письмо 
-// $mail->addAddress('arzonccnt@gmail.com'); // Add a recipient
+$mail->addAddress('dioksid-barnaul@mail.ru'); // Add a recipient
 $mail->addAddress('nur3.dav.97@gmail.com');  // Name is optional
 //$mail->addReplyTo('info@example.com', 'Information');
 //$mail->addCC('cc@example.com');
@@ -41,7 +41,7 @@ $mail->Body = '
 </tr>
 <tr>
 	<td style="border: 1px solid #bdbdbd; padding: 5px; width: 120px">Объём</td>
-	<td style="border: 1px solid #bdbdbd; padding: 5px;">' . $volume . 'Кг.</td>
+	<td style="border: 1px solid #bdbdbd; padding: 5px;">' . $volume . ' кг.</td>
 </tr>
 <tr>
 	<td style="border: 1px solid #bdbdbd; padding: 5px; width: 120px">Регион</td>
