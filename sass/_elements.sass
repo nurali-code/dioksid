@@ -99,6 +99,9 @@ section
     min-width: 200px
     box-shadow: 0px 31px 27px -23px rgba(227, 30, 37, 0.31)
     position: relative
+    background-repeat: no-repeat
+    background-position: center center
+    background-size: 40px 40px
     span
         display: block
         opacity: .5
@@ -172,13 +175,18 @@ section
         opacity: 1
         transform: scale(.95)
 
-    &[disabled]
+    &[disabled],
+    &.loading
         color: rgba(0, 0, 0, .2)
         background-color: rgba($yelow, .3)
         cursor: unset
         animation: none
         pointer-events: none
         box-shadow: none
+
+    &.loading
+        color: transparent
+        background-image: url('../img/loader.gif')
 
     &-link
         padding-right: 28px
@@ -238,10 +246,10 @@ section
     background-repeat: no-repeat
     background-position: right 20px top 20px
     color: $black
-    h4 
+    h4
         margin-bottom: 10px
         max-width: 94%
-        span 
+        span
             white-space: nowrap
     p
         max-width: 90%
@@ -307,9 +315,9 @@ select
     cursor: pointer
     background-image: url('../img/arrow-down.svg')
     background-repeat: no-repeat
-    background-position: center right 20px
-    background-size: 24px auto
-    padding-right: 30px
+    background-position: center right 12px
+    background-size: 20px auto
+    padding-right: 40px
     position: relative
     z-index: 1
     margin: 0
@@ -318,7 +326,7 @@ input[name="volume"]
     background-image: url('../img/kg.svg')
     background-repeat: no-repeat
     background-position: center right 20px
-    background-size: 25px auto 
+    background-size: 25px auto
 
 @keyframes shadowErr
     0%

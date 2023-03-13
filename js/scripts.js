@@ -55,17 +55,19 @@ $('input[type="tel"]').inputmask({ "mask": "8-999-999-99-99" });
 /*---------------------------------------------------end*/
 
 $("form").submit(function () {
-    $('form .btn').attr('disabled', 'disabled');
+    $('form .btn').addClass('loading');
     $.ajax({
         type: "post",
         method: 'post',
         url: "./smart.php",
         data: $(this).serialize()
     }).done(function () {
-        $('form .btn').removeAttr('disabled');
+        $('form .btn').removeClass('loading');
         $('form').trigger('reset');
         $('.modal').fadeOut();
-        alert('Спасибо, за заявку , ожидайте с вами свяжется специалист');
+        $('#modal-thanks').fadeIn();
+        setTimeout(() => { hideModals() }, 6000)
+        // alert('Спасибо, за заявку, ожидайте с вами свяжется специалист');
     }); return false;
 });
 
